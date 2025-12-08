@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina Vision</title>
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- Favicon: Simple SVG Circle -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22white%22/></svg>">
+</head>
+
+<body>
+    <div class="glass-container">
+        <header>
+            <div class="logo-area">
+                <!-- Simple Geometric Eye Icon -->
+                <svg class="logo-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <h1>Lumina Vision</h1>
+            </div>
+            <p class="tagline">Premium Assistive Intelligence</p>
+        </header>
+
+        <main>
+            <div class="video-container">
+                <video id="videoElement" autoplay playsinline></video>
+                <canvas id="canvasElement" style="display:none;"></canvas>
+                <div class="scan-overlay"></div>
+            </div>
+
+            <div class="controls-area">
+                <button id="btnDetect" class="btn-glass">
+                    <span class="icon">◎</span>
+                    <span>Identify</span>
+                </button>
+                <button id="btnRead" class="btn-glass">
+                    <span class="icon">≡</span>
+                    <span>Read Text</span>
+                </button>
+            </div>
+
+            <div class="settings-area">
+                <span class="setting-label">Voice Feedback</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="autoSpeak" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <!-- Connect Button Removed -->
+
+            <div id="resultContainer" class="result-glass">
+                <div class="result-header">Analysis</div>
+                <p id="resultText">Waiting to visualize...</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by Prince | Bala</p>
+        </footer>
+    </div>
+
+    <!-- QR Modal Removed -->
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
